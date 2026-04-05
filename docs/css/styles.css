@@ -1,0 +1,391 @@
+/* Importação da Fonte do Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+        /* Paleta de Cores Baseada no Logo */
+        :root {
+            --black: #000000;
+            --dark-gray: #1A1A1A;
+            --medium-gray: #7A7A7A;
+            --light-gray: #F2F2F2;
+            --white: #FFFFFF;
+        }
+
+        /* Reset Básico e Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h1 { font-size: 2.8rem; }
+        h2 { font-size: 2.2rem; text-align: center; }
+        p { margin-bottom: 15px; }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* --- Cabeçalho e Navegação --- */
+        .header {
+            background-color: var(--white);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+            display: flex;
+            align-items: center;
+            padding: 8px 16px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            height: 90px;
+        }
+
+        /* Barra interna que controla espaçamento horizontal */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-brown);
+            text-decoration: none;
+        }
+
+        .logo img {
+            width: 90px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover suave para destaque */
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--black);
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--medium-gray);
+        }
+
+        /* --- Seção Principal (Hero) --- */
+        #hero {
+            background: var(--light-gray);
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            color: var(--text-brown);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background: var(--black);
+            color: var(--white);
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: all 0.3s ease; 
+        }
+
+        .btn:hover {
+            background: var(--dark-gray);
+            transform: translateY(-2px);
+        }
+
+        /* --- Seção de Problemas --- */
+        #problems {
+            background-color: var(--white);
+        }
+
+        .problems-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .problem-card {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .problem-card .icon {
+            font-size: 3rem;
+            color: var(--black);
+            margin-bottom: 15px;
+        }
+
+        /* --- Seção de Soluções (Serviços) --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3 {
+            color: var(--black);
+        }
+
+        /* --- Seção de Cases de Sucesso --- */
+        #cases {
+            background-color: var(--white);
+        }
+        
+        .testimonial {
+            max-width: 700px;
+            margin: 50px auto 0;
+            text-align: center;
+            padding: 30px;
+            background-color: var(--light-gray);
+            border-left: 4px solid var(--black);
+            border-radius: 5px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            font-size: 1.1rem;
+        }
+
+        .testimonial .author {
+            font-weight: 600;
+            margin-top: 15px;
+            display: block;
+            color: var(--medium-gray);
+        }
+
+        /* --- Seção de Contato --- */
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-form {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-form .btn {
+            align-self: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* --- Rodapé (Footer) --- */
+        .footer {
+            background-color: var(--white);
+            color: var(--medium-gray);
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* --- ESTILOS DO MENU HAMBURGUER --- */
+
+        /* 1. Estilo do botão (as 3 barrinhas) */
+        .menu-hamburger {
+            display: none; /* ESCONDIDO EM TELAS GRANDES */
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 25px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            z-index: 1002; /* Garante que fique acima dos outros itens */
+        }
+
+        .menu-hamburger-bar {
+            width: 100%;
+            height: 3px;
+            background-color: var(--black);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        /* (Opcional) Animação do botão para virar um "X" quando ativo */
+        .menu-hamburger.active .menu-hamburger-bar:nth-child(1) {
+            transform: rotate(45deg) translate(7px, 6px);
+        }
+        .menu-hamburger.active .menu-hamburger-bar:nth-child(2) {
+            opacity: 0;
+        }       
+        .menu-hamburger.active .menu-hamburger-bar:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+
+
+        /* --- ESTILOS RESPONSIVOS COMPLETOS --- */
+        @media (max-width: 768px) {
+
+        /* 1. Mostra o botão hambúrguer */
+        .menu-hamburger {
+            display: flex;
+        }
+
+        /* 2. Estiliza o menu de links para ficar ESCONDIDO */
+        .nav-links {
+        /* Fica por cima de tudo */
+            position: fixed; 
+            z-index: 1001;
+
+        /* Começa no topo (abaixo do header) e vai até o fim */
+            top: 90px; /* Altura do seu header */
+            right: 0;
+            height: calc(100vh - 90px); /* Altura total da tela - altura do header */
+        
+        /* Tamanho e cor */
+            width: 70%; /* Ocupa 70% da largura da tela */
+            max-width: 300px; /* Limite máximo */
+            background-color: var(--white);
+            box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+
+        /* Organiza os links verticalmente */
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            gap: 30px;
+
+        /* A MÁGICA: Joga o menu para fora da tela */
+            transform: translateX(100%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* 3. A classe .active que o JavaScript vai adicionar */
+        .nav-links.active {
+        /* Traz o menu de volta para a tela */
+            transform: translateX(0);
+        }
+
+        /* --- Outros ajustes de layout --- */
+
+        /* 4. Ajustando a Seção Hero */
+        #hero {
+            min-height: 70vh;
+            padding-top: 40px;
+            padding-bottom: 40px;
+        }
+
+        /* 5. Ajustando a Tipografia (Fontes) */
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.8rem; }
+        .hero-content p { font-size: 1.1rem; }
+
+        /* 6. Ajustando o Grid de Serviços */
+        .services-grid {
+            grid-template-columns: 1fr;
+            gap: 25px;
+        }
+
+        /* 7. Ajustando o Grid de Problemas */
+        .problems-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+        /* Ajuste final para telas bem pequenas */
+        @media (max-width: 480px) {
+        .logo img {
+            width: 70px; /* Reduz o logo */
+        }
+    
+        .nav-links {
+            top: 74px; /* Ajusta o menu para o novo tamanho do header */
+            height: calc(100vh - 74px);
+        }
+    
+        .header {
+            height: 74px; /* Ajusta o header */
+        }
+
+        h1 {
+            font-size: 1.9rem;
+        }
+    }
